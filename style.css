@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group, .filter-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+input[type="text"], input[type="date"], select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn { background-color: #4caf50; color: white; }
+#addBtn:hover { background-color: #45a049; }
+#clearBtn { background-color: #f44336; color: white; }
+#clearBtn:hover { background-color: #da190b; }
+
+#taskList {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+li:hover { opacity: 0.85; }
+
+li span {
+  cursor: pointer;
+}
+
+li button {
+  background-color: #f44336;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+li select {
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+li input[type="date"] {
+  margin-left: 10px;
+}
+
+#counter { margin-top: 10px; font-weight: bold; }
+
+/* Priority colors */
+.low { background-color: #c8e6c9; }
+.medium { background-color: #fff9c4; }
+.high { background-color: #ffcdd2; }
+
+/* Completed task style */
+.completed { text-decoration: line-through; color: gray; }
+
+/* Responsive */
+@media(max-width: 550px){
+  .input-group, .filter-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  input[type="text"], input[type="date"], select, button {
+    width: 100%;
+  }
+}

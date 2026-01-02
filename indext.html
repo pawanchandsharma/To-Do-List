@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced To-Do App</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>My To-Do App</h1>
+
+    <!-- Input section -->
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter a task">
+      <input type="date" id="dueDate" min="">
+      <select id="prioritySelect">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="addBtn">Add Task</button>
+      <button id="clearBtn">Clear All</button>
+    </div>
+
+    <!-- Search & Filter -->
+    <div class="filter-group">
+      <input type="text" id="searchInput" placeholder="Search tasks...">
+      <select id="filterSelect">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+    </div>
+
+    <!-- Task list -->
+    <ul id="taskList"></ul>
+
+    <!-- Counter -->
+    <div id="counter">Total: 0 | Completed: 0 | Pending: 0</div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
