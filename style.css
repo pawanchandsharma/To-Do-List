@@ -1,111 +1,132 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  max-width: 600px;
-  margin: 50px auto;
-  background: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.input-group, .filter-group {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-  justify-content: center;
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
-input[type="text"], input[type="date"], select {
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+input[type="text"] {
+    padding: 8px;
+    width: 55%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 button {
-  padding: 8px 12px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-#addBtn { background-color: #4caf50; color: white; }
-#addBtn:hover { background-color: #45a049; }
-#clearBtn { background-color: #f44336; color: white; }
-#clearBtn:hover { background-color: #da190b; }
+#addBtn {
+    background-color: #4caf50;
+    color: white;
+}
 
-#taskList {
-  list-style: none;
-  padding-left: 0;
+#addBtn:hover {
+    background-color: #45a049;
+}
+
+#clearBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+#clearBtn:hover {
+    background-color: #da190b;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px;
-  margin: 8px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
 }
 
-li:hover { opacity: 0.85; }
+li:hover {
+    opacity: 0.8;
+}
 
 li span {
-  cursor: pointer;
+    cursor:pointer;
 }
 
 li button {
-  background-color: #f44336;
-  color: white;
-  padding: 2px 6px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
 }
 
 li select {
-  margin-left: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-li input[type="date"] {
-  margin-left: 10px;
+#counter {
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-#counter { margin-top: 10px; font-weight: bold; }
+/* Priority Colors */
+.low {
+    background-color: #c8e6c9;
+}
 
-/* Priority colors */
-.low { background-color: #c8e6c9; }
-.medium { background-color: #fff9c4; }
-.high { background-color: #ffcdd2; }
+.medium {
+    background-color: #fff9c4;
+}
+
+.high {
+    background-color: #ffcdd2;
+}
 
 /* Completed task style */
-.completed { text-decoration: line-through; color: gray; }
-
-/* Responsive */
-@media(max-width: 550px){
-  .input-group, .filter-group {
-    flex-direction: column;
-    gap: 8px;
-  }
-  input[type="text"], input[type="date"], select, button {
-    width: 100%;
-  }
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
